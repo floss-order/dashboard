@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <title>Темаааа</title>
+</head>
+<body>
+    <main>
+        <h1>
+            Тема: 
+            <span class="theme">Создание информационной системы "Баланс трудовых ресурсов" с учетом вляния пандемии на отрасли в регионах</span>
+        </h1>
+        <div class="charts">
+            <ul>
+                <li>
+                    <h2>Stonks!</h2>
+                    <div class="chart ct-chart" id="chart1"></div>
+                </li>
+                <li>
+                    <h2>Падение чего-то там</h2>
+                    <div class="chart ct-chart" id="chart2"></div>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <script>
+        const options = {
+            width: 800,
+            height: 600
+        }
+        new Chartist.Line('#chart1', {
+            labels: [1, 2, 3, 4],
+            series: [[100, 120, 180, 200]],
+        }, options);
+
+        // Initialize a Line chart in the container with the ID chart2
+        new Chartist.Bar('#chart2', {
+            labels: [1, 2, 3, 4],
+            series: [[5, 2, 8, 3]]
+        }, options)
+    </script>
+</body>
+</html>
